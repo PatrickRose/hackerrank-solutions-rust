@@ -1,0 +1,7 @@
+# HackerRank solutions, in rust
+
+These are me solving the problems at HackerRank, in Rust.
+
+I'm not a Rust developer. I'm a PHP developer. I am probably doing some things wrong - but that's why we learn eh?
+
+I've split the various challenges into a single .rs file. When I submit these I'll dump the code and wrap it with a `main()`. Doing this is left as an exercise to the reader.
