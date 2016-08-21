@@ -8,7 +8,6 @@ use std;
 #[cfg(test)]
 mod tests {
     use super::Matrix;
-    use super::read_input;
 
     #[test]
     fn test_it_calculates_the_first_diagonal() {
@@ -34,12 +33,6 @@ mod tests {
         assert_eq!(15, matrix.calculate_diagonal_difference());
     }
 
-    #[test]
-    fn test_reading_input() {
-        assert_eq!("11 2 4
-4 5 6
-10 8 -12", read_input());
-    }
 }
 
 struct Matrix {
