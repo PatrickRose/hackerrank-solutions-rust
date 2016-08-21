@@ -35,11 +35,13 @@ mod tests {
 
 }
 
+#[allow(dead_code)]
 struct Matrix {
     num_lines: u32,
     lines: Vec<String>,
 }
 
+#[allow(dead_code)]
 impl Matrix {
 
     fn new(input: String) -> Matrix {
@@ -87,6 +89,7 @@ impl Matrix {
     }
 }
 
+#[allow(dead_code)]
 fn parse_string(s: String) -> i64 {
     let num = match s.trim().parse() {
         Ok(num) => num,
@@ -96,8 +99,25 @@ fn parse_string(s: String) -> i64 {
    return num;
 }
     
+#[allow(dead_code)]
 fn read_string() -> String {
    let mut input = String::new();
    std::io::stdin().read_line(&mut input).expect("Could not read stdin!");
    return input;
+}
+
+#[allow(dead_code)]
+fn main() {
+    let num_lines = read_string();
+    let num_lines = parse_string(num_lines);
+    let mut input = String::new();
+
+    for _ in 0..num_lines {
+        let next_line = read_string();
+        input.push_str(&next_line);
+    }
+
+    let matrix = Matrix::new(input);
+
+    println!("{}", matrix.calculate_diagonal_difference());
 }
